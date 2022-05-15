@@ -18,7 +18,7 @@ jobs:
         password: ${{secrets.DOCKER_PASSWORD}}
     
     - name: Build the Docker image
-      run: docker build --file website/dockerfile --tag portfolio_website:$(date +%s)
+      run: docker build website/ --tag portfolio_website:$(date +%s)
 
     - name: Push the Docker image
       run: docker push ${{secrets.DOCKER_USER}}/portfolio_website

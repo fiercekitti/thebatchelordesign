@@ -4,9 +4,6 @@ on:
   push:
     branches: [ main ]
 
-env:
-  tag: $(date +%s)
-
 jobs:
   build_and_push:
     runs-on: ubuntu-latest
@@ -21,7 +18,7 @@ jobs:
         password: ${{secrets.DOCKER_PASSWORD}}
     
     - name: Build the Docker image
-      run: docker build website/ --tag ${{secrets.DOCKER_USER}}/portfolio_website:${{ env.tag }}
+      run: docker build website/ --tag ${{secrets.DOCKER_USER}}/portfolio_website:${{ github.sha }}
 
     - name: Push the Docker image
-      run: docker push ${{secrets.DOCKER_USER}}/portfolio_website:${{ env.tag }}
+      run: docker push ${{secrets.DOCKER_USER}}/portfolio_website:${{ github.sha }}

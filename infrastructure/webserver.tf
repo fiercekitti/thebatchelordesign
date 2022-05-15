@@ -33,7 +33,7 @@ resource "aws_security_group" "webserver-sg" {
   // To Allow Port 80 Transport
   ingress {
     from_port = 80
-    protocol = ""
+    protocol = "tcp"
     to_port = 80
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -61,6 +61,7 @@ resource "aws_spot_instance_request" "webserver" {
   subnet_id = var.subnet
   associate_public_ip_address = false
   key_name = var.keyname
+  wait_for_fulfillment = true
 
   user_data = <<-EOF
     #!/bin/bash
@@ -89,7 +90,7 @@ resource "aws_spot_instance_request" "webserver" {
 }
 
 resource "aws_eip" "webserver" {
-  instance = aws_spot_instance_request.webserver.id
+  instance = aws_spot_instance_request.webserver.spot_instance_id
   vpc      = true
 
   depends_on = [ aws_spot_instance_request.webserver ]
@@ -98,6 +99,16 @@ resource "aws_eip" "webserver" {
 resource "aws_route53_record" "www" {
   zone_id = data.aws_route53_zone.website.zone_id
   name    = "www.${data.aws_route53_zone.website.name}"
+  type    = "A"
+  ttl     = "300"
+  records = [ aws_eip.webserver.public_ip ]
+
+  depends_on = [ aws_eip.webserver ]
+}
+
+resource "aws_route53_record" "no_www" {
+  zone_id = data.aws_route53_zone.website.zone_id
+  name    = "${data.aws_route53_zone.website.name}"
   type    = "A"
   ttl     = "300"
   records = [ aws_eip.webserver.public_ip ]

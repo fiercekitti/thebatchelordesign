@@ -2,11 +2,14 @@ provider "aws" {
   region = var.region
 }
 
+#Imports the existing route53 zone name for DNS entry
 data "aws_route53_zone" "website" {
-  name         = "itsmeganificent.com"
+  name         = var.dnsName
   private_zone = false
 }
 
+#This section grabs the latest ami image for Amazon Linux
+#Keeps patches current at each deployment.
 data "aws_ami" "amazon_linux_2" {
   most_recent = true
   owners      = ["amazon"]
@@ -17,6 +20,7 @@ data "aws_ami" "amazon_linux_2" {
   }
 }
 
+#This section creates the security group, and opens up ssh and http access.
 resource "aws_security_group" "webserver-sg" {
   name = var.secgroupname
   description = var.secgroupname
@@ -27,7 +31,7 @@ resource "aws_security_group" "webserver-sg" {
     from_port = 22
     protocol = "tcp"
     to_port = 22
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = var.sshIP
   }
 
   // To Allow Port 80 Transport
@@ -52,7 +56,7 @@ resource "aws_security_group" "webserver-sg" {
 
 resource "aws_key_pair" "webserver" {
   key_name   = var.keyname
-  public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOd0i8D+9JxVxcugOoAxFXFm2otOFh8gsBZW7lXwBy3Z christhebatchelor@gmail.com"
+  public_key = var.sshPub
 }
 
 resource "aws_spot_instance_request" "webserver" {

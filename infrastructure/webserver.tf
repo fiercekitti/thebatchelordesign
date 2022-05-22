@@ -36,6 +36,7 @@ resource "aws_security_group" "webserver-sg" {
 
   // To Allow Port 80 Transport
   ingress {
+    # ts:skip=port80OpenToInternet webserver
     from_port = 80
     protocol = "tcp"
     to_port = 80
@@ -112,7 +113,7 @@ resource "aws_route53_record" "www" {
 
 resource "aws_route53_record" "no_www" {
   zone_id = data.aws_route53_zone.website.zone_id
-  name    = "${data.aws_route53_zone.website.name}"
+  name    = data.aws_route53_zone.website.name
   type    = "A"
   ttl     = "300"
   records = [ aws_eip.webserver.public_ip ]

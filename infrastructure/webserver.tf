@@ -22,6 +22,7 @@ data "aws_ami" "amazon_linux_2" {
 
 #This section creates the security group, and opens up ssh and http access.
 resource "aws_security_group" "webserver-sg" {
+# ts:skip=AC_AWS_0228 port80OpenToInternet webserver
   name = var.secgroupname
   description = var.secgroupname
   vpc_id = var.vpc
@@ -36,7 +37,6 @@ resource "aws_security_group" "webserver-sg" {
 
   // To Allow Port 80 Transport
   ingress {
-    # ts:skip=AC_AWS_0228 port80OpenToInternet webserver
     from_port = 80
     protocol = "tcp"
     to_port = 80

@@ -1,10 +1,10 @@
 {
   "extends": "stylelint-config-twbs-bootstrap",
   "rules": {
-    "value-no-vendor-prefix": false,
-    "property-no-vendor-prefix": false,
-    "selector-no-vendor-prefix": false,
-    "media-feature-name-no-vendor-prefix": false,
-    "at-rule-no-vendor-prefix": false
+    "value-no-vendor-prefix": null,
+    "property-no-vendor-prefix": null,
+    "selector-no-vendor-prefix": null,
+    "media-feature-name-no-vendor-prefix": null,
+    "at-rule-no-vendor-prefix": null
   }
 }

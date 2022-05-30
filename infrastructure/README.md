@@ -1,6 +1,5 @@
 # Webserver Terraform
 
-
 ## Description
 This is a very simple [Terraform](https://www.terraform.io/) setup that builds out the necessary components to deploy a containerized webserver image on an EC2 instance and link it to an existing route53 entry.
 

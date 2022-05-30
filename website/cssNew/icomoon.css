@@ -3,8 +3,7 @@
   font-style: normal;
   font-weight: normal;
   src: url("../fonts/icomoon/icomoon.eot?qtatmt");
-  src:
-url("../fonts/icomoon/icomoon.eot?qtatmt#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?qtatmt") format("truetype"), url("../fonts/icomoon/icomoon.woff?qtatmt") format("woff"), url("../fonts/icomoon/icomoon.svg?qtatmt#icomoon") format("svg");
+  src: url("../fonts/icomoon/icomoon.eot?qtatmt#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?qtatmt") format("truetype"), url("../fonts/icomoon/icomoon.woff?qtatmt") format("woff"), url("../fonts/icomoon/icomoon.svg?qtatmt#icomoon") format("svg");
 }
 
 [class^="icon-"],

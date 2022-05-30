@@ -8,6 +8,6 @@
     "at-rule-no-vendor-prefix": null
   },
   "ignoreFiles": [
-    "**/WhiteLabel/**"
+    "**/WhiteLabel/**/*.css"
   ]
 }

@@ -6,5 +6,8 @@
     "selector-no-vendor-prefix": null,
     "media-feature-name-no-vendor-prefix": null,
     "at-rule-no-vendor-prefix": null
-  }
+  },
+  "ignoreFiles": [
+    "**/WhiteLabel/**"
+  ]
 }

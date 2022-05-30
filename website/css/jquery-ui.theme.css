@@ -13,54 +13,54 @@
 
 
 /* Component containers
-----------------------------------*/
+---------------------------------- */
 .ui-widget {
-	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;;
-	font-size: 1.1em;
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+  font-size: 1.1em;
 }
 .ui-widget .ui-widget {
-	font-size: 1em;
+  font-size: 1em;
 }
 .ui-widget input,
 .ui-widget select,
 .ui-widget textarea,
 .ui-widget button {
-	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;;
-	font-size: 1em;
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+  font-size: 1em;
 }
 .ui-widget-content {
-	border: 1px solid #aaaaaa;
-	background: #ffffff url("images/ui-bg_flat_75_ffffff_40x100.png") 50% 50% repeat-x;
-	color: #005397;
+  color: #005397;
+  background: #fff url("images/ui-bg_flat_75_ffffff_40x100.png") 50% 50% repeat-x;
+  border: 1px solid #aaa;
 }
 .ui-widget-content a {
-	color: #005397;
+  color: #005397;
 }
 .ui-widget-header {
-	border: 1px solid #aaaaaa;
-	background: #cccccc url("images/ui-bg_highlight-soft_75_cccccc_1x100.png") 50% 50% repeat-x;
-	color: #222222;
-	font-weight: bold;
+  font-weight: bold;
+  color: #222;
+  background: #ccc url("images/ui-bg_highlight-soft_75_cccccc_1x100.png") 50% 50% repeat-x;
+  border: 1px solid #aaa;
 }
 .ui-widget-header a {
-	color: #222222;
+  color: #222;
 }
 
 /* Interaction states
-----------------------------------*/
+---------------------------------- */
 .ui-state-default,
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
-	border: 1px solid #d3d3d3;
-	background: #cfe3f4 url("images/ui-bg_highlight-hard_75_cfe3f4_1x100.png") 50% 50% repeat-x;
-	font-weight: normal;
-	color: #005397;
+  font-weight: normal;
+  color: #005397;
+  background: #cfe3f4 url("images/ui-bg_highlight-hard_75_cfe3f4_1x100.png") 50% 50% repeat-x;
+  border: 1px solid #d3d3d3;
 }
 .ui-state-default a,
 .ui-state-default a:link,
 .ui-state-default a:visited {
-	color: #005397;
-	text-decoration: none;
+  color: #005397;
+  text-decoration: none;
 }
 .ui-state-hover,
 .ui-widget-content .ui-state-hover,
@@ -68,10 +68,10 @@
 .ui-state-focus,
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
-	border: 1px solid #013662;
-	background: #005397 url("images/ui-bg_highlight-hard_75_005397_1x100.png") 50% 50% repeat-x;
-	font-weight: normal;
-	color: #ffffff;
+  font-weight: normal;
+  color: #fff;
+  background: #005397 url("images/ui-bg_highlight-hard_75_005397_1x100.png") 50% 50% repeat-x;
+  border: 1px solid #013662;
 }
 .ui-state-hover a,
 .ui-state-hover a:hover,
@@ -81,109 +81,109 @@
 .ui-state-focus a:hover,
 .ui-state-focus a:link,
 .ui-state-focus a:visited {
-	color: #ffffff;
-	text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 .ui-state-active,
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active {
-	border: 1px solid #aaaaaa;
-	background: #ffffff url("images/ui-bg_highlight-hard_65_ffffff_1x100.png") 50% 50% repeat-x;
-	font-weight: normal;
-	color: #005397;
+  font-weight: normal;
+  color: #005397;
+  background: #fff url("images/ui-bg_highlight-hard_65_ffffff_1x100.png") 50% 50% repeat-x;
+  border: 1px solid #aaa;
 }
 .ui-state-active a,
 .ui-state-active a:link,
 .ui-state-active a:visited {
-	color: #005397;
-	text-decoration: none;
+  color: #005397;
+  text-decoration: none;
 }
 
 /* Interaction Cues
-----------------------------------*/
+---------------------------------- */
 .ui-state-highlight,
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {
-	border: 1px solid #fcefa1;
-	background: #fbf9ee url("images/ui-bg_glass_55_fbf9ee_1x400.png") 50% 50% repeat-x;
-	color: #363636;
+  color: #363636;
+  background: #fbf9ee url("images/ui-bg_glass_55_fbf9ee_1x400.png") 50% 50% repeat-x;
+  border: 1px solid #fcefa1;
 }
 .ui-state-highlight a,
 .ui-widget-content .ui-state-highlight a,
 .ui-widget-header .ui-state-highlight a {
-	color: #363636;
+  color: #363636;
 }
 .ui-state-error,
 .ui-widget-content .ui-state-error,
 .ui-widget-header .ui-state-error {
-	border: 1px solid #cd0a0a;
-	background: #fef1ec url("images/ui-bg_glass_95_fef1ec_1x400.png") 50% 50% repeat-x;
-	color: #cd0a0a;
+  color: #cd0a0a;
+  background: #fef1ec url("images/ui-bg_glass_95_fef1ec_1x400.png") 50% 50% repeat-x;
+  border: 1px solid #cd0a0a;
 }
 .ui-state-error a,
 .ui-widget-content .ui-state-error a,
 .ui-widget-header .ui-state-error a {
-	color: #cd0a0a;
+  color: #cd0a0a;
 }
 .ui-state-error-text,
 .ui-widget-content .ui-state-error-text,
 .ui-widget-header .ui-state-error-text {
-	color: #cd0a0a;
+  color: #cd0a0a;
 }
 .ui-priority-primary,
 .ui-widget-content .ui-priority-primary,
 .ui-widget-header .ui-priority-primary {
-	font-weight: bold;
+  font-weight: bold;
 }
 .ui-priority-secondary,
 .ui-widget-content .ui-priority-secondary,
 .ui-widget-header .ui-priority-secondary {
-	opacity: .7;
-	filter:Alpha(Opacity=70);
-	font-weight: normal;
+  font-weight: normal;
+  filter: alpha(opacity=70);
+  opacity: .7;
 }
 .ui-state-disabled,
 .ui-widget-content .ui-state-disabled,
 .ui-widget-header .ui-state-disabled {
-	opacity: .35;
-	filter:Alpha(Opacity=35);
-	background-image: none;
+  background-image: none;
+  filter: alpha(opacity=35);
+  opacity: .35;
 }
 .ui-state-disabled .ui-icon {
-	filter:Alpha(Opacity=35); /* For IE8 - See #6059 */
+  filter: alpha(opacity=35); /* For IE8 - See #6059 */
 }
 
 /* Icons
-----------------------------------*/
+---------------------------------- */
 
 /* states and images */
 .ui-icon {
-	width: 16px;
-	height: 16px;
+  width: 16px;
+  height: 16px;
 }
 .ui-icon,
 .ui-widget-content .ui-icon {
-	background-image: url("images/ui-icons_222222_256x240.png");
+  background-image: url("images/ui-icons_222222_256x240.png");
 }
 .ui-widget-header .ui-icon {
-	background-image: url("images/ui-icons_222222_256x240.png");
+  background-image: url("images/ui-icons_222222_256x240.png");
 }
 .ui-state-default .ui-icon {
-	background-image: url("images/ui-icons_005397_256x240.png");
+  background-image: url("images/ui-icons_005397_256x240.png");
 }
 .ui-state-hover .ui-icon,
 .ui-state-focus .ui-icon {
-	background-image: url("images/ui-icons_ffffff_256x240.png");
+  background-image: url("images/ui-icons_ffffff_256x240.png");
 }
 .ui-state-active .ui-icon {
-	background-image: url("images/ui-icons_005397_256x240.png");
+  background-image: url("images/ui-icons_005397_256x240.png");
 }
 .ui-state-highlight .ui-icon {
-	background-image: url("images/ui-icons_2e83ff_256x240.png");
+  background-image: url("images/ui-icons_2e83ff_256x240.png");
 }
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon {
-	background-image: url("images/ui-icons_cd0a0a_256x240.png");
+  background-image: url("images/ui-icons_cd0a0a_256x240.png");
 }
 
 /* positioning */
@@ -324,6 +324,7 @@
 .ui-icon-seek-prev { background-position: -48px -160px; }
 .ui-icon-seek-end { background-position: -64px -160px; }
 .ui-icon-seek-start { background-position: -80px -160px; }
+
 /* ui-icon-seek-first is deprecated, use ui-icon-seek-start instead */
 .ui-icon-seek-first { background-position: -80px -160px; }
 .ui-icon-stop { background-position: -96px -160px; }
@@ -366,45 +367,45 @@
 
 
 /* Misc visuals
-----------------------------------*/
+---------------------------------- */
 
 /* Corner radius */
 .ui-corner-all,
 .ui-corner-top,
 .ui-corner-left,
 .ui-corner-tl {
-	border-top-left-radius: 15px;
+  border-top-left-radius: 15px;
 }
 .ui-corner-all,
 .ui-corner-top,
 .ui-corner-right,
 .ui-corner-tr {
-	border-top-right-radius: 15px;
+  border-top-right-radius: 15px;
 }
 .ui-corner-all,
 .ui-corner-bottom,
 .ui-corner-left,
 .ui-corner-bl {
-	border-bottom-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 .ui-corner-all,
 .ui-corner-bottom,
 .ui-corner-right,
 .ui-corner-br {
-	border-bottom-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 /* Overlays */
 .ui-widget-overlay {
-	background: #aaaaaa url("images/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
-	opacity: .3;
-	filter: Alpha(Opacity=30);
+  background: #aaa url("images/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
+  filter: alpha(opacity=30);
+  opacity: .3;
 }
 .ui-widget-shadow {
-	margin: -8px 0 0 -8px;
-	padding: 8px;
-	background: #aaaaaa url("images/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
-	opacity: .3;
-	filter: Alpha(Opacity=30);
-	border-radius: 8px;
+  padding: 8px;
+  margin: -8px 0 0 -8px;
+  background: #aaa url("images/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
+  filter: alpha(opacity=30);
+  border-radius: 8px;
+  opacity: .3;
 }

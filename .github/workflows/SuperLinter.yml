@@ -14,12 +14,12 @@ name: Lint Code Base
 #############################
 # Start the job on all push #
 #############################
-on:
-  push:
-    branches-ignore: [main]
-    # Remove the line above to run when pushing to master
-  pull_request:
-    branches: [main]
+# on:
+#   push:
+#     branches-ignore: [main]
+#     # Remove the line above to run when pushing to master
+#   pull_request:
+#     branches: [main]
 
 ###############
 # Set the Job #

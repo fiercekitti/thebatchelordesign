@@ -1,9 +1,9 @@
 name: Docker Image CI
 
 on:
-  push:
-    branches: [ main ]
-    paths: [ 'website/*' ]
+#   push:
+#     branches: [ main ]
+#     paths: [ 'website/*' ]
 
 jobs:
   build_and_push:
